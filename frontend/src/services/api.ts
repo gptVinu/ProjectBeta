@@ -12,7 +12,7 @@ import type {
 // ─── Axios Instance ───────────────────────────────────────────────────────────
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api/v1",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/api/v1" || "https://projectbeta-0tyr.onrender.com/api/v1",
   timeout: 30000,
   headers: { "Content-Type": "application/json" },
 });
