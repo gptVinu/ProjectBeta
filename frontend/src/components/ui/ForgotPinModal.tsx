@@ -17,7 +17,6 @@ export default function ForgotPinModal({ isOpen, onClose, onReset }: ForgotPinMo
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [recoveryToken, setRecoveryToken] = useState("");
-  const [resetToken, setResetToken] = useState("");
 
   const handleAnswerSubmit = async () => {
     setError("");
@@ -29,8 +28,8 @@ export default function ForgotPinModal({ isOpen, onClose, onReset }: ForgotPinMo
     setIsLoading(true);
     try {
       const res = await recoveryApi.verifyQA(answer);
-      if (res.success && res.recoveryToken) {
-        setRecoveryToken(res.recoveryToken);
+      if (res.success && res.data?.recoveryToken) {
+        setRecoveryToken(res.data.recoveryToken);
         setStep("password");
         setAnswer("");
       }
@@ -51,8 +50,7 @@ export default function ForgotPinModal({ isOpen, onClose, onReset }: ForgotPinMo
     setIsLoading(true);
     try {
       const res = await recoveryApi.verifyPassword(adminPassword, recoveryToken);
-      if (res.success && res.resetToken) {
-        setResetToken(res.resetToken);
+      if (res.success && res.data?.resetToken) {
         setStep("reset");
         setAdminPassword("");
       }
