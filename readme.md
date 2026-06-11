@@ -249,11 +249,4 @@ Enter invalid code → Friendly error animation
 Visit /echoes-admin → Login → Add a memory with media → Confirm it appears on search
 Reset PIN from admin → Verify new PIN works on next visit
 Test on mobile (375px) — all screens fully responsive
-Open Questions
-NOTE
 
-Do you want the PIN to be 4 digits or 6 digits?
-Should the memory page auto-play video, or require user to press play?
-Do you have a Cloudinary account ready? If so, share the Cloud Name and I'll pre-wire the config.
-Should the search support fuzzy matching (e.g., typing "vina" finds "vinayak") or exact match only?
-Any specific color palette preference, or should I go with the dark aurora/galaxy theme I've proposed?
