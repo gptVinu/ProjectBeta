@@ -13,7 +13,7 @@ import type {
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "https://projectbeta-0tyr.onrender.com/api/v1",
-  timeout: 30000,
+  timeout: 1200000,
   headers: { "Content-Type": "application/json" },
 });
 
